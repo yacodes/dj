@@ -1,5 +1,9 @@
 # Useful tips for preparing DJ set
 
+## Rename
+
+- Renaming files in a folder to sequential numbers: `ls | cat -n | while read n f; do mv "$f"`printf "%04d.wav" \$n`; done`
+
 ## Normalization
 
 - mp3: `ffmpeg-normalize o1.mp3 --normalization-type ebu --target-level -10 --loudness-range-target 10 -c:a libmp3lame -b:a 320k -o n1.mp3`
