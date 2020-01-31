@@ -2,7 +2,11 @@
 
 ## Rename
 
-- Renaming files in a folder to sequential numbers: `ls | cat -n | while read n f; do mv "$f"`printf "%04d.wav" \$n`; done`
+- Renaming files in a folder to sequential numbers:
+
+```sh
+ls | cat -n | while read n f; do mv "$f" `printf "%04d.wav" $n`; done
+```
 
 ## Normalization
 
