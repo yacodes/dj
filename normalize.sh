@@ -7,7 +7,7 @@ if [ -n "$1" ]; then
   mkdir normalized
 
   for i in *.wav; do
-    ffmpeg-normalize "$i" -c:a pcm_s16le -ar 44100 -nt peak -t -3 -o "${i%.*}.mp3"
+    ffmpeg-normalize "$i" -c:a pcm_s16le -ar 44100 -nt peak -t -3 -o "./normalized/${i%.*}.wav"
   done
 
 else
